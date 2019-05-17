@@ -62,7 +62,7 @@ while ($i <= $time_to_scan){
 			$anti_spam = file_get_contents("anti_spam");
 			if($anti_spam>=5)break;
 			file_put_contents("anti_spam",($anti_spam+1));		
-		}
+		} else break;
 	}
 	unset($password);
 	unset($real_pass);
